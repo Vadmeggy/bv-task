@@ -1,0 +1,4 @@
+locust
+fake-useragent==0.1.11
+beautifulsoup4
+lxml

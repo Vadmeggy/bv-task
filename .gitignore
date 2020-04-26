@@ -1,0 +1,6 @@
+.idea/
+.python-version
+.ve/
+__pycache__
+test_automation/node_modules
+test_automation/*.png
