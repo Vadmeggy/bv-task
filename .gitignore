@@ -1,6 +1,8 @@
 .idea/
+.DS_Store
 .python-version
 .ve/
+*.csv
 __pycache__
 test_automation/node_modules
 test_automation/*.png

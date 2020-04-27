@@ -1,4 +1,4 @@
 locust
 fake-useragent==0.1.11
-beautifulsoup4
-lxml
+beautifulsoup4==4.9.0
+lxml==4.5.0

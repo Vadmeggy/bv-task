@@ -9,7 +9,6 @@ ITEMS_TO_QUERY = ['Sony', 'Panasonic', 'Playstation 4', 'Blizzard',
                   'Apple', 'iPhone', 'Samsung', 'MacBook', 'intel core i7', 'seagate']
 TIMEOUT = 1
 
-task_count = {'index': 0, 'search': 0}
 ua_str = UserAgent().chrome
 
 
@@ -20,7 +19,6 @@ class UserBehaviour(TaskSet):
                              catch_response=True) as response:
             if response.elapsed > datetime.timedelta(seconds=TIMEOUT):
                 response.failure("Response took longer than 1 second")
-        task_count['index'] += 1
 
     @task
     def search(self):
@@ -30,10 +28,10 @@ class UserBehaviour(TaskSet):
             soup = BeautifulSoup(response.content, 'html.parser')
             result = soup.select('.srp-results .s-item')
             if response.elapsed > datetime.timedelta(seconds=TIMEOUT):
+                print(response.elapsed)
                 response.failure(f"Response took longer than {TIMEOUT} second")
             if len(result) <= 5:
                 response.failure("Not enough items found")
-            task_count['search'] += 1
 
 
 class WebsiteUser(HttpLocust):
