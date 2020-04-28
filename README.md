@@ -2,13 +2,13 @@
 data_proccessing and perf_test_locust are python packages, 
 we have to create a python environment to execute them
 
-test_automation is a nodejs package because of puppeteer. We either need to create a nodejs environment 
+test_automation is a nodejs package. We either need to create a nodejs environment 
 or use the dockerized solution. Docker is needed for redis (which was used as a db)
 
 These commands executed in terminal under macOS. Running on win machine can be different.
 
 ### How to create the python env:
-1, Download python3 (version 3.6+, I developed with the latest one)  
+1, Download python3 (version 3.6+, I developed with 3.8.2)  
 2, Enter project root  
 3, Create virtualenv for the python projects: `python -m venv .ve`  
 4, Activate python virtualenv: `source .ve/bin/activate`  
@@ -17,7 +17,8 @@ These commands executed in terminal under macOS. Running on win machine can be d
 ## Exercise 1: performance test
 
 ### Gatling:
-`./bin/gatling.sh`
+0, `cd perf_test_gatling`  
+1, `./bin/gatling.sh`
 
 ### LocustIO:
 0, `cd perf_test_locust`  

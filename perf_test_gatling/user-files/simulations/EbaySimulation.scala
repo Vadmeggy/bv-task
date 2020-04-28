@@ -12,7 +12,6 @@ class EbaySimulation extends Simulation {
     .acceptLanguageHeader("en;q=1.0,de-AT;q=0.9")
     .acceptEncodingHeader("gzip;q=1.0,compress;q=0.5")
     .userAgentHeader("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36")
-    .disableFollowRedirect
 
 
   val item: List[String] = List("Sony", "Panasonic", "Playstation 4", "Blizzard",
