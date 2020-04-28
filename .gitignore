@@ -7,3 +7,4 @@ __pycache__
 test_automation/node_modules
 test_automation/*.png
 perf_test_gatling/results
+perf_test_gatling/target
