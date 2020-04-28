@@ -69,9 +69,9 @@ describe('Test Automation exercises', function () {
 
             // wait to render the new images in the tile
             await sleep(1000);
-            const visible_cards2 = await page.$$('#isc_3W .simpleTile:not([aria-hidden="true"])');
+            const visible_cards = await page.$$('#isc_3W .simpleTile:not([aria-hidden="true"])');
 
-            assert(visible_cards2.length > 12)
+            assert(visible_cards.length > 12)
             await page.screenshot({path: 'snapshots/test1.png'});
 
 
@@ -149,6 +149,7 @@ describe('Test Automation exercises', function () {
                     });
                     const description_list = await page.$$('.listTable > tbody > tr > td:nth-child(3)');
                     if (description_list.length > 0) {
+                        // There are items in the opened table, modify the desc
                         for (const index in description_list) {
                             const desc_list = await page.$$('.listTable > tbody > tr > td:nth-child(3)');
                             const desc = desc_list[index]
@@ -170,6 +171,7 @@ describe('Test Automation exercises', function () {
                         await page.waitForSelector('td.button', {hidden: true});
                         await page.$('#isc_2Dtable tr[aria-selected="true"] td:nth-child(2) div').then(elem => elem.click());
                     } else {
+                        // There is no item, close the table
                         await page.$('#isc_2Dtable tr[aria-selected="true"] td:first-child span').then(elem => elem.click());
                     }
                 }
