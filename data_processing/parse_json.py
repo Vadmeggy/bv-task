@@ -18,6 +18,6 @@ second_half = datetime.datetime.strptime(data['StartTimes']['SecondHalf'], '%Y-%
 second_half = second_half - datetime.timedelta(minutes=30)
 data['StartTimes']['SecondHalf'] = second_half.strftime('%Y-%m-%dT%H:%M:%S.%f')[:-3] + 'Z'
 
-
 from pprint import pprint
+
 pprint(data)
