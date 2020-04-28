@@ -5,8 +5,8 @@ from bs4 import BeautifulSoup
 from fake_useragent import UserAgent
 from locust import HttpLocust, constant, TaskSet, task
 
-ITEMS_TO_QUERY = ['Sony', 'Panasonic', 'Playstation 4', 'Blizzard',
-                  'Apple', 'iPhone', 'Samsung', 'MacBook', 'intel core i7', 'seagate']
+ITEMS_TO_QUERY = ["Sony", "Panasonic", "Playstation 4", "Blizzard",
+                  "Apple", "iPhone", "Samsung", "MacBook", "intel core i7", "seagate"]
 TIMEOUT = 1
 
 ua_str = UserAgent().chrome
