@@ -49,5 +49,6 @@ This is a puppeteer nodejs project with redis as a key-value db.
 
 ### Running in docker:
 0, Install: docker, docker-compose  
-1, `docker-compose run test`  
-2, Test images are saved in the snapshots folder  
+1, `cd test_automation`  
+2, `docker-compose run test`  
+3, Test images are saved in the snapshots folder  
