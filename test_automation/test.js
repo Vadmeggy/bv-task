@@ -4,7 +4,7 @@ const acceptCookie = require('./utils').cookieAcceptButton;
 const sleep = require('./utils').sleep;
 const randomString = require('./utils').randomStr;
 const redis = require("async-redis");
-const assertFromRedis = require('./utils').assertFromRedis
+const assertFromRedis = require('./utils').assertFromRedis;
 
 describe('Test Automation exercises', function () {
     let browser;
@@ -71,7 +71,7 @@ describe('Test Automation exercises', function () {
             await sleep(1000);
             const visible_cards = await page.$$('#isc_3W .simpleTile:not([aria-hidden="true"])');
 
-            assert(visible_cards.length > 12)
+            assert(visible_cards.length > 12);
             await page.screenshot({path: 'snapshots/test1.png'});
 
 
