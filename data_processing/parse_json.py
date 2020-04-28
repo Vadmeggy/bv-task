@@ -6,7 +6,7 @@ with open('data.json', 'r') as f:
 
 what_to_print = ['Corners', 'Fouls', 'GoalKicks', 'ThrowIns', 'Goals']
 for item in what_to_print:
-    print(data[item]['Score'])
+    print(f"{item}: {data[item]['Score']}")
 data['FixtureId'] = 1000
 data['CustomerId'] = 1
 

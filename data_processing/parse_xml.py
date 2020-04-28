@@ -11,8 +11,8 @@ transaction_id = parsed.find('.//transactionId')
 outcome_id = parsed.find('.//outcomeId')
 total_stake = parsed.find('.//totalStake')
 
-print(f'transactionId: {transaction_id.text}')
 print(f'sportsBookReference: {sportsbook_reference.text}')
+print(f'transactionId: {transaction_id.text}')
 print(f'outcomeId: {outcome_id.text}')
 print(f'totalStake: {total_stake.text}')
 
